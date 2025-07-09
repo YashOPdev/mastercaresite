@@ -229,3 +229,22 @@ footer {
     display: block;
   }
 }
+/* Glowing effect on click */
+.product-item:active,
+.impact-box:active {
+  box-shadow: 0 0 30px var(--gold);
+  transform: scale(0.98);
+  transition: all 0.2s ease;
+}
+
+/* Reveal Animation Classes */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
