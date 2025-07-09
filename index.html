@@ -1,99 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Master Care - Powder Coating Experts</title>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Raleway:wght@600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Master Care</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="navbar">
-    <div class="container">
-      <div class="logo">Master Care</div>
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <div class="logo">Master Care</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <section id="home" class="hero">
     <div class="hero-text">
       <h1>Engineering Excellence in Powder Coating</h1>
-      <p>North India's leading manufacturer of high-performance powder coating lines, machines, reciprocators, and guns. Engineering excellence for over decades.</p>
+      <p>North India's leading manufacturer of high‑performance powder coating lines, machines, reciprocators, and guns. Engineering excellence for decades.</p>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-content">
-      <h2 class="section-heading">About Us</h2>
-      <p class="body-text">At Master Care, we specialize in the design and manufacturing of powder coating solutions. With two decades of experience, we lead innovation with durable reciprocators, precision guns, and full-scale powder coating plants tailored to our clients' needs.</p>
-    </div>
+  <section id="about" class="section">
+    <h2 class="section-heading">About Us</h2>
+    <p class="body-text">At Master Care, we specialize in designing and manufacturing powder coating systems backed by 20 years of expertise—from reciprocators and spray guns to full-scale plants.</p>
   </section>
 
-  <!-- PRODUCTS -->
-  <section class="products" id="products">
+  <section id="products" class="section">
     <h2 class="section-heading">Our Products</h2>
     <div class="product-grid">
       <div class="product-item">
-        <img src="media/product1.jpg" alt="Powder Coating Plant" />
-        <h3 class="product-title">Powder Coating Plants</h3>
-        <p class="product-desc">High-efficiency automated lines for industrial powder coating needs.</p>
+        <img src="media/product1.jpg" alt="Plant">
+        <h3>Coating Plants</h3>
+        <p>Full-line automated coating plants for industrial scale.</p>
       </div>
       <div class="product-item">
-        <img src="media/product2.jpg" alt="Reciprocators" />
-        <h3 class="product-title">Reciprocators</h3>
-        <p class="product-desc">Precision motion systems for uniform powder application.</p>
+        <img src="media/product2.jpg" alt="Reciprocator">
+        <h3>Reciprocators</h3>
+        <p>Precision reciprocators for smooth, uniform coverage.</p>
       </div>
       <div class="product-item">
-        <img src="media/product3.jpg" alt="Powder Guns" />
-        <h3 class="product-title">Powder Coating Guns</h3>
-        <p class="product-desc">High-performance spray guns for a professional finish.</p>
+        <img src="media/product3.jpg" alt="Gun">
+        <h3>Spray Guns</h3>
+        <p>Ergonomic high-efficiency powder guns.</p>
       </div>
     </div>
   </section>
 
-  <!-- IMPACT SECTION -->
-  <section class="impact" id="impact">
+  <section id="impact" class="section impact">
     <h2 class="section-heading">Our Impact</h2>
-    <div class="impact-container">
-      <div class="impact-box">
-        <img src="media/icon1.png" alt="Plants Icon" />
-        <h2><span class="counter" data-target="500">0</span>+</h2>
-        <p>Plants Installed</p>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <img src="media/icon1.png" alt="">
+        <div class="count"><span class="counter" data-target="500">0</span>+</div>
+        <div class="label">Plants Installed</div>
       </div>
-      <div class="impact-box">
-        <img src="media/icon2.png" alt="Clients Icon" />
-        <h2><span class="counter" data-target="500">0</span>+</h2>
-        <p>Happy Clients</p>
+      <div class="impact-item">
+        <img src="media/icon2.png" alt="">
+        <div class="count"><span class="counter" data-target="500">0</span>+</div>
+        <div class="label">Happy Clients</div>
       </div>
-      <div class="impact-box">
-        <img src="media/icon3.png" alt="Years Icon" />
-        <h2><span class="counter" data-target="20">0</span></h2>
-        <p>Years of Experience</p>
+      <div class="impact-item">
+        <img src="media/icon3.png" alt="">
+        <div class="count"><span class="counter" data-target="20">0</span>+</div>
+        <div class="label">Years of Experience</div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2 class="section-heading">Have a project or need a custom solution?</h2>
-    <p class="body-text">Let’s talk. Reach out to us for tailored powder coating systems and expert advice.</p>
-    <a href="mailto:mastercare@example.com" class="contact-btn">Email Us</a>
+  <section id="contact" class="section contact">
+    <h2 class="section-heading">Let’s Talk</h2>
+    <p class="body-text">Want a custom solution or a quote? Reach out today.</p>
+    <a href="mailto:info@mastercare.com" class="contact-btn">Email Us</a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Master Care Coating Solutions. All rights reserved.</p>
+    <p>© 2025 Master Care. All rights reserved.</p>
   </footer>
 
   <script src="js/script.js"></script>
