@@ -1,37 +1,34 @@
-// script.js
-
-// Scroll-triggered counters
-const counters = document.querySelectorAll('.counter');
-let triggered = false;
-
-function animateCounters() {
-  if (triggered) return;
-  const scrollY = window.scrollY + window.innerHeight;
-  const impactTop = document.querySelector('.impact').offsetTop;
-
-  if (scrollY > impactTop + 100) {
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / 150;
-
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
-    triggered = true;
-  }
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
 }
 
-window.addEventListener('scroll', animateCounters);
+// Counter
+let started = false;
 
-// Mobile menu toggle
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('show');
+function animateCounters() {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const step = target / 100;
+    const update = () => {
+      count += step;
+      if (count < target) {
+        counter.innerText = Math.floor(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
+}
+
+window.addEventListener("scroll", () => {
+  const impact = document.getElementById("impact");
+  const top = impact.getBoundingClientRect().top;
+  if (top < window.innerHeight && !started) {
+    animateCounters();
+    started = true;
+  }
 });
