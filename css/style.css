@@ -77,7 +77,7 @@ h1, h2, h3 {
 
 .hero {
   height: 100vh;
-  background: url('../media/hero-bg.jpg') center/cover no-repeat;
+  background: url('../media/hero-bg.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
