@@ -3,109 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Master Care</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Master Care | Powder Coating Experts</title>
-
-  <!-- ✅ Standard Meta -->
-  <meta name="description" content="North India's leading manufacturer of high-performance powder coating lines, machines, reciprocators, and guns." />
-
-  <!-- ✅ Open Graph Meta Tags (For WhatsApp, Facebook) -->
-  <meta property="og:title" content="Master Care | Powder Coating Experts" />
-  <meta property="og:description" content="North India's leading manufacturer of high-performance powder coating systems." />
-  <meta property="og:url" content="https://mastercare.org.in" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://mastercare.org.in/media/preview.jpg" />
-
-  <!-- ✅ Twitter Card Tags (optional, for Twitter/X sharing) -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Master Care | Powder Coating Experts" />
-  <meta name="twitter:description" content="Experts in powder coating plants, guns, and automation." />
-  <meta name="twitter:image" content="https://mastercare.org.in/media/preview.jpg" />
-
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-  <header class="navbar">
+  <nav class="navbar">
     <div class="logo">Master Care</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
+    <div class="menu-toggle">☰</div>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#products">Products</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#impact">Impact</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </header>
+  </nav>
 
-  <section id="home" class="hero">
+  <section class="hero" id="hero">
     <div class="hero-text">
-      <h1>Engineering Excellence in Powder Coating</h1>
-      <p>North India's leading manufacturer of high‑performance powder coating lines, machines, reciprocators, and guns. Engineering excellence for decades.</p>
+      <h1>North India's Leading Manufacturer</h1>
+      <p>High-performance powder coating lines, machines, reciprocators, and guns. Engineering excellence for decades.</p>
+      <div class="hero-buttons">
+        <a href="#about">ABOUT US</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#services">SERVICES</a>
+      </div>
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section class="about" id="about">
     <h2 class="section-heading">About Us</h2>
-    <p class="body-text">At Master Care, we specialize in designing and manufacturing powder coating systems backed by 20 years of expertise—from reciprocators and spray guns to full-scale plants.</p>
+    <p class="centered-text">We are a trusted name in powder coating technology, delivering innovative solutions and exceptional service for over 20 years.</p>
   </section>
 
-  <section id="products" class="section">
+  <section class="products" id="products">
     <h2 class="section-heading">Our Products</h2>
     <div class="product-grid">
       <div class="product-item">
-        <img src="media/product1.jpg" alt="Plant" />
-        <h3>Coating Plants</h3>
-        <p>Full-line automated coating plants for industrial scale.</p>
+        <img src="media/reciprocator.png" alt="Reciprocator" />
+        <h3 class="product-title">Reciprocators</h3>
       </div>
       <div class="product-item">
-        <img src="media/product2.jpg" alt="Reciprocator" />
-        <h3>Reciprocators</h3>
-        <p>Precision reciprocators for smooth, uniform coverage.</p>
+        <img src="media/coating-plant.png" alt="Powder Coating Plant" />
+        <h3 class="product-title">Coating Plants</h3>
       </div>
       <div class="product-item">
-        <img src="media/product3.jpg" alt="Gun" />
-        <h3>Spray Guns</h3>
-        <p>Ergonomic high-efficiency powder guns.</p>
+        <img src="media/gun.png" alt="Powder Coating Gun" />
+        <h3 class="product-title">Coating Guns</h3>
       </div>
     </div>
   </section>
 
-  <section id="impact" class="section">
+  <section class="services" id="services">
+    <h2 class="section-heading">Services We Provide</h2>
+    <ul class="service-list">
+      <li>Upgrading existing coating systems</li>
+      <li>Maintenance and repairs</li>
+      <li>Plant shifting and reinstallation</li>
+      <li>Gun and parts repair</li>
+    </ul>
+  </section>
+
+  <section class="impact" id="impact">
     <h2 class="section-heading">Our Impact</h2>
-    <div class="impact-grid">
-      <div class="impact-item">
-        <img src="media/icon1.png" alt="">
-        <div class="count"><span class="counter" data-target="500">0</span>+</div>
-        <div class="label">Plants Installed</div>
+    <div class="impact-container">
+      <div class="impact-box">
+        <img src="media/factory-icon.png" alt="Plants Icon">
+        <h2 class="counter" data-target="500">0</h2>
+        <p>Plants Installed</p>
       </div>
-      <div class="impact-item">
-        <img src="media/icon2.png" alt="">
-        <div class="count"><span class="counter" data-target="500">0</span>+</div>
-        <div class="label">Happy Clients</div>
+      <div class="impact-box">
+        <img src="media/happy-icon.png" alt="Happy Clients Icon">
+        <h2 class="counter" data-target="500">0</h2>
+        <p>Happy Clients</p>
       </div>
-      <div class="impact-item">
-        <img src="media/icon3.png" alt="">
-        <div class="count"><span class="counter" data-target="20">0</span>+</div>
-        <div class="label">Years Experience</div>
+      <div class="impact-box">
+        <img src="media/years-icon.png" alt="Years Icon">
+        <h2 class="counter" data-target="20">0</h2>
+        <p>Years Experience</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section contact">
+  <section class="contact" id="contact">
     <h2 class="section-heading">Let’s Talk</h2>
-    <p class="body-text">Have a project or need a custom solution? Reach out today.</p>
-    <a href="mailto:info@mastercare.com" class="contact-btn">Email Us</a>
+    <p>Have a project or need a custom solution? Reach out today.</p>
+    <div class="contact-btn-wrapper">
+      <a href="mailto:info@mastercare.org.in" class="contact-btn">Email Us</a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Master Care. All rights reserved.</p>
+    &copy; 2025 Master Care. All rights reserved.
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
