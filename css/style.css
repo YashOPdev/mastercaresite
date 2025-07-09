@@ -113,12 +113,12 @@ h1, h2, h3 {
 /* Products */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);  /* exactly 4 per row */
   gap: 2rem;
+  justify-content: center;               /* centers the entire grid */
   margin-top: 2rem;
-  align-items: stretch;      /* <--- Ensures all grid cells are equal height */
-  justify-items: center;     /* <--- Centers content horizontally */
 }
+
 
 
 .product-item {
