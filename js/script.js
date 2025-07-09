@@ -1,40 +1,39 @@
 function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('active');
+  document.getElementById("navLinks").classList.toggle("show");
 }
 
-// Scroll-triggered counter
-let countersStarted = false;
+// Scroll-triggered counters
+const counters = document.querySelectorAll(".counter");
+let started = false;
 
-function startCounters() {
-  if (countersStarted) return;
-
-  const counters = document.querySelectorAll(".counter");
-
+function animateCounters() {
   counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute("data-target");
-      const count = +counter.innerText;
-      const increment = Math.ceil(target / 200); // slower
+    const target = +counter.getAttribute("data-target");
+    const increment = target / 100;
 
+    let count = 0;
+    const updateCount = () => {
+      count += increment;
       if (count < target) {
-        counter.innerText = count + increment;
-        setTimeout(updateCount, 30); // slow frame rate
+        counter.innerText = Math.floor(count);
+        requestAnimationFrame(updateCount);
       } else {
         counter.innerText = target;
       }
     };
     updateCount();
   });
-
-  countersStarted = true;
 }
 
-// Detect when impact section is in view
-window.addEventListener("scroll", () => {
-  const impact = document.querySelector(".impact");
-  const top = impact.getBoundingClientRect().top;
+function isInViewport(elem) {
+  const rect = elem.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
 
-  if (top < window.innerHeight - 100) {
-    startCounters();
+window.addEventListener("scroll", () => {
+  const impactSection = document.querySelector("#impact");
+  if (!started && isInViewport(impactSection)) {
+    animateCounters();
+    started = true;
   }
 });
