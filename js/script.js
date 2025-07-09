@@ -1,34 +1,34 @@
 function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('show');
+  document.getElementById("navLinks").classList.toggle("show");
 }
 
-let counted = false;
-const counterElems = document.querySelectorAll('.counter');
+// Counter
+let started = false;
 
-function runCounters() {
-  if (counted) return;
-  const impactSection = document.getElementById('impact');
-  if (!impactSection) return;
+function animateCounters() {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const step = target / 100;
+    const update = () => {
+      count += step;
+      if (count < target) {
+        counter.innerText = Math.floor(count);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
+}
 
-  const rect = impactSection.getBoundingClientRect();
-  if (rect.top <= window.innerHeight - 100) {
-    counterElems.forEach(el => {
-      const target = +el.getAttribute('data-target');
-      let count = 0;
-      const step = Math.ceil(target / 200);
-      const timer = setInterval(() => {
-        count += step;
-        if (count >= target) {
-          el.textContent = target;
-          clearInterval(timer);
-        } else {
-          el.textContent = count;
-        }
-      }, 25);
-    });
-    counted = true;
+window.addEventListener("scroll", () => {
+  const impact = document.getElementById("impact");
+  const top = impact.getBoundingClientRect().top;
+  if (top < window.innerHeight && !started) {
+    animateCounters();
+    started = true;
   }
-}
-
-window.addEventListener('scroll', runCounters);
-window.addEventListener('load', runCounters);
+});
