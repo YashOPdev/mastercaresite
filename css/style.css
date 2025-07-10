@@ -123,6 +123,7 @@ h1, h2, h3 {
 
 
 
+
 .product-item {
   flex: 1 1 250px;   /* flexible width */
   max-width: 300px;
@@ -137,6 +138,7 @@ h1, h2, h3 {
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 
 
