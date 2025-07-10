@@ -113,11 +113,12 @@ h1, h2, h3 {
 /* Products */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* exactly 4 per row */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-content: center;               /* centers the entire grid */
   margin-top: 2rem;
+  justify-content: center;
 }
+
 
 
 
@@ -129,10 +130,13 @@ h1, h2, h3 {
   box-shadow: 0 0 15px rgba(255, 168, 0, 0.2);
   transition: transform 0.3s ease;
   width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 
 
 .product-item:hover {
