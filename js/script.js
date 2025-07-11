@@ -49,5 +49,32 @@ function reveal() {
       reveals[i].classList.remove('active');
     }
   }
+
+  // Initialize ScrollReveal
+const sr = ScrollReveal({
+  distance: '50px',
+  duration: 1200,
+  easing: 'ease-out',
+  origin: 'bottom',
+  reset: false,  // true = animates again on re-scroll
+});
+
+// Animate whole sections
+sr.reveal('.section', {
+  interval: 200
+});
+
+// Animate individual cards (like products, services, etc.)
+sr.reveal('.product-item', {
+  interval: 150,
+  origin: 'bottom'
+});
+
+// Animate impact stats (if you want)
+sr.reveal('.impact-item', {
+  interval: 150,
+  origin: 'top'
+});
+
 }
 
