@@ -78,3 +78,7 @@ sr.reveal('.impact-item', {
 
 }
 
+sr.reveal('.navbar', { origin: 'top', duration: 1000 });
+sr.reveal('.hero-text', { origin: 'bottom', distance: '60px', delay: 300 });
+
+
