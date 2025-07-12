@@ -33,52 +33,20 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Slow scroll reveal animation
-window.addEventListener('scroll', reveal);
-
-function reveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  for (let i = 0; i < reveals.length; i++) {
-    const windowHeight = window.innerHeight;
-    const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add('active');
-    } else {
-      reveals[i].classList.remove('active');
-    }
-  }
-
-  // Initialize ScrollReveal
+// ✅ ScrollReveal - Only once, not on scroll
 const sr = ScrollReveal({
-  distance: '50px',
-  duration: 1200,
+  distance: '40px',
+  duration: 800,
   easing: 'ease-out',
   origin: 'bottom',
-  reset: false,  // true = animates again on re-scroll
+  reset: false,
+  delay: 100,
+  mobile: true
 });
 
-// Animate whole sections
-sr.reveal('.section', {
-  interval: 200
-});
-
-// Animate individual cards (like products, services, etc.)
-sr.reveal('.product-item', {
-  interval: 150,
-  origin: 'bottom'
-});
-
-// Animate impact stats (if you want)
-sr.reveal('.impact-item', {
-  interval: 150,
-  origin: 'top'
-});
-
-}
-
+sr.reveal('.section-heading', { interval: 100 });
+sr.reveal('.product-item', { interval: 100 });
+sr.reveal('.impact-item', { interval: 100 });
+sr.reveal('.contact-btn', { delay: 200, origin: 'top' });
 sr.reveal('.navbar', { origin: 'top', duration: 1000 });
 sr.reveal('.hero-text', { origin: 'bottom', distance: '60px', delay: 300 });
-
-
