@@ -121,50 +121,64 @@ h1, h2, h3 {
 
 
 /* Product & Service Cards */
+/* Product & Service Cards */
 .product-item {
-  flex: 1 1 250px;                    /* Responsive card width */
+  flex: 1 1 250px;
   max-width: 300px;
-  background: #1e1e1e;               /* Dark base color */
+  background: #1e1e1e;  /* Dark base */
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 15px rgba(255, 168, 0, 0.2);
-  transition: all 0.4s ease;         /* Smooth hover transition */
+  transition: all 0.4s ease;
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: var(--text-light);          /* Default text: white */
 }
 
+/* Hover Effects */
 .product-item:hover {
-  background: var(--gold);           /* Glow background on hover */
-  color: var(--dark-bg);             /* Text becomes dark */
-  box-shadow: 0 0 25px var(--gold), 0 0 40px var(--gold);  /* Glowing effect */
-  transform: translateY(-10px) scale(1.02);  /* Lift effect */
+  background: var(--gold);  /* Background becomes golden */
+  box-shadow: 0 0 25px var(--gold), 0 0 40px var(--gold);
+  transform: translateY(-10px) scale(1.02);
 }
 
-/* Ensure text elements inside card adapt */
+/* Click/tap effect */
+.product-item:active {
+  transform: translateY(-4px) scale(0.96);
+  box-shadow: 0 0 20px var(--gold);
+  transition: all 0.15s ease;
+}
+
+/* Product Image */
+.product-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Heading - GOLD by default, dark on hover */
 .product-item h3 {
   font-size: 1.4rem;
+  color: var(--gold);
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
+.product-item:hover h3 {
+  color: var(--dark-bg);
+}
+
+/* Description - Light gray by default, dark on hover */
 .product-item p {
+  color: #ccc;
   transition: color 0.3s ease;
 }
 
-/* Remove specific colors to allow inheritance */
-.product-item h3,
-.product-item p {
-  color: inherit; /* Allow color to change on hover */
+.product-item:hover p {
+  color: var(--dark-bg);
 }
-
-
-
-
-
 /* Impact */
 .impact-grid {
   display: flex;
