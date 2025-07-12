@@ -110,22 +110,20 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
-/* Products */
+/* Product & Service Grid */
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* <-- THIS centers all rows */
+  justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-
-/* Product & Service Cards */
 /* Product & Service Cards */
 .product-item {
   flex: 1 1 250px;
   max-width: 300px;
-  background: #1e1e1e;  /* Dark base */
+  background: #1e1e1e;
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
@@ -139,12 +137,12 @@ h1, h2, h3 {
 
 /* Hover Effects */
 .product-item:hover {
-  background: var(--gold);  /* Background becomes golden */
+  background: var(--gold);
   box-shadow: 0 0 25px var(--gold), 0 0 40px var(--gold);
   transform: translateY(-10px) scale(1.02);
 }
 
-/* Click/tap effect */
+/* Click effect */
 .product-item:active {
   transform: translateY(-4px) scale(0.96);
   box-shadow: 0 0 20px var(--gold);
@@ -179,7 +177,8 @@ h1, h2, h3 {
 .product-item:hover p {
   color: var(--dark-bg);
 }
-/* Impact */
+
+/* Impact Section */
 .impact-grid {
   display: flex;
   flex-wrap: wrap;
@@ -214,7 +213,7 @@ h1, h2, h3 {
   margin-top: 0.5rem;
 }
 
-/* Contact */
+/* Contact Button */
 .contact-btn {
   display: inline-block;
   background: var(--accent);
@@ -240,7 +239,27 @@ footer {
   color: #aaa;
 }
 
-/* Responsive */
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glowing effect on click */
+.product-item:active,
+.impact-box:active {
+  box-shadow: 0 0 30px var(--gold);
+  transform: scale(0.98);
+  transition: all 0.2s ease;
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -261,27 +280,8 @@ footer {
     display: block;
   }
 }
-/* Glowing effect on click */
-.product-item:active,
-.impact-box:active {
-  box-shadow: 0 0 30px var(--gold);
-  transform: scale(0.98);
-  transition: all 0.2s ease;
-}
 
-/* Reveal Animation Classes */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Director's Desk Section */
+/* ---------------- Director's Desk Section ---------------- */
 .director-desk {
   display: flex;
   flex-wrap: wrap;
@@ -293,7 +293,7 @@ footer {
 }
 
 .director-photo-wrapper {
-  flex: 1 1 280px;
+  flex: 1 1 260px;
   display: flex;
   justify-content: center;
 }
@@ -315,19 +315,17 @@ footer {
   max-width: 600px;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
   .director-desk {
     flex-direction: column;
     text-align: center;
   }
 
-  .director-info {
-    max-width: 100%;
-  }
-
   .director-photo-wrapper {
     justify-content: center;
   }
-}
 
+  .director-info {
+    max-width: 100%;
+  }
+}
