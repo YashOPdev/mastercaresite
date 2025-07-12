@@ -280,3 +280,54 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Director's Desk Section */
+.director-desk {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.director-photo-wrapper {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.director-photo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 168, 0, 0.3);
+  object-fit: cover;
+}
+
+.director-info {
+  flex: 2;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .director-desk {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .director-info {
+    max-width: 100%;
+  }
+
+  .director-photo-wrapper {
+    justify-content: center;
+  }
+}
+
